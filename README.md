@@ -1,18 +1,40 @@
-# GDSC_Hackathon_Death
-A website to get life expectancy of a given user
+# Death Clock
 
-Dependencies: flask, sqlalchemy, tensorflow, keras
+This repository contains the boilerplate code for the [Mortality Dataset](https://www.kaggle.com/datasets/rajanand/mortality). You can refer to the kaggle workspaces to fetch/download your data.
 
-# Homepage: 
-![image](https://user-images.githubusercontent.com/95633551/230608746-843fc105-bebb-4fa3-ac0e-d6a52ce97048.png)
-Has 10 inputs, Name and other details of user(for passing the values in ML model)
 
-# After clicking submit, 
-ML model runs and returns the age value(pre-trained model)
-![image](https://user-images.githubusercontent.com/95633551/230609105-d7194a23-4b56-4e48-b0f8-5322d95badb9.png)
+## Description of files
+|FileName| Functionality|
+| --- |---|
+|[App.py](https://github.com/Deceptrax123/gdsc-wow-hackathon/blob/master/app.py) | Contains the HTTP server |
+| [model-train.ipynb](https://github.com/Deceptrax123/gdsc-wow-hackathon/blob/master/model_train.ipynb)| Notebook for training|
+|[model.json](https://github.com/Deceptrax123/gdsc-wow-hackathon/blob/master/model.json) | Saved model|
+|[model.h5](https://github.com/Deceptrax123/gdsc-wow-hackathon/blob/master/model.h5) | Saved weights of the previous training|
+|[Requirements.txt](https://github.com/Deceptrax123/gdsc-wow-hackathon/blob/master/Requirements.txt)|Dependencies used| 
 
-# We are using SQLDB therefore persistent storage and login(in future) is possible. 
-Therefore we can check leaderboard at /leaderboard/ section to compare ourselves with other users who have used the website for age expectancy
+## Flow
+- **Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+- **Test the server**
+```bash
+python app.py
+```
+- **Train the model**
+Open the Jupyter Notebook and tune the model for higher accuracy
+- **Save the model**
+```python
+model.save()
+```
+- **Test the model**
+- Deploy it
 
-![image](https://user-images.githubusercontent.com/95633551/230609316-bfbe8b18-c05c-491e-8e3d-d617bb4958b9.png)
+## Reccomenedations
+
+Once you've completed tuning the model for higher accuracy, you can train the model on:
+- [Azure ML](https://ml.azure.com)
+- [Amazon Sagemaker](https://aws.amazon.com/sagemaker/)
+- [Kaggle Worksapces](https://www.kaggle.com/getting-started/106737)
+- [Google's Colab](https://colab.research.google.com/)
 
